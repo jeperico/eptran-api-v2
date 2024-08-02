@@ -2,7 +2,7 @@ deps:
 	poetry install
 
 runserver:
-	poetry run eptran/manage.py runserver 0.0.0.0:8000
+	poetry run eptran/manage.py runserver localhost:8000
 
 rundb:
 	sudo docker compose -f docker-compose-dev.yml up -d --build
@@ -13,7 +13,7 @@ stopdb:
 migrate:
 	poetry run eptran/manage.py migrate
 
-makemigrations:
+makemigrations: 
 	poetry run eptran/manage.py makemigrations
 
 createsuperuser:
